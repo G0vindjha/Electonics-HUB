@@ -1,0 +1,661 @@
+@font-face{
+    font-family:"raleway-regular";
+    src: url(../fonts/);
+}
+@font-face{
+    font-family:"raleway-medium";
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face{
+    font-family:"raleway-bold";
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face{
+    font-family:"raleway-extrabold";
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+@font-face{
+    font-family:"raleway-semibold";
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face{
+    font-family:"raleway-black";
+    src: url(../fonts/Raleway-Black.ttf);
+}
+/* colours */
+
+:root {
+    --primary: #eebf00;
+    --secondary:#232838;
+    --ternary:#6c6c6c;
+    --danger:#fe4545;
+    --pure:#fefefe;
+    --light:#f0f0f0;
+    --heaven:#ffffff;
+    --footer:#20333f;
+}
+/* Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    -webkit-font-smoothing:antialiased;
+    font-family: "raleway-regular";
+}
+
+.container {
+    width: 100%;
+    padding: o 15px;
+    margin: 0 auto;
+}
+
+@media (min-width:567px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+
+.main-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.nav-bg{
+    width: 100%;
+    height: 100%;
+    background: var(--light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.nav-trigger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 3px;
+}
+
+.nav-trigger svg{
+    transform: rotate(90deg) scaleX(-1);
+    width: 40px;
+    height: 40px;
+}
+
+.site-content-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--heaven);
+    z-index: 2;
+    transition: all .3s ease;
+}
+
+.site-content-wrapper.scaled{
+    transform: scale(0.9) translatex(90%);
+    border-radius: 3px;
+    box-shadow: 0 3px 10px 0 var(--secondary);
+}
+
+.site-content{
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;   
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.item-center{
+    align-items: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.u-icon{
+    width: 8%;
+    margin-top: 8%;
+    margin-left: 45%;
+}
+
+.user-login{
+    background: var(--heaven);
+    display: flex;
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+ .user-input{
+    width: 20%;
+    margin-left: 40%;
+    border-color: black;
+    border-radius: 20px;
+    padding: 0 1rem;
+    font-size: 1rem;
+    background: var(--heaven);
+ }
+ .user-input{
+     outline: none;
+ }
+
+ .user-input:hover{
+     background:lightgrey;
+     transition: all .3 ease;
+ }
+
+ .user-img{
+    padding: 0.8rem;
+    border: none;
+    background:lightslategrey;
+    color: var(--pure);
+    border-radius: 10rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3 ease
+    outline:none;
+}
+
+.remember-me{
+    margin-left: 30%;
+}
+
+.forgot-password{
+    
+    margin-right: 30%;
+    padding-left: 14rem;
+}
+
+.fg{
+    font-family: "ralewale-semibold";
+    color:var(--secondary);
+    font-size: 1rem;
+    text-decoration:none;
+}
+.lgn{
+    margin-left: 48%;
+}
+
+.btn-login{
+    padding: 0.75rem 0.75rem;
+border-radius: 4px;border: none;
+line-height: 0.8;
+font-size: 1.2rem;
+cursor: pointer;
+transition: all 0.3s ease;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+border: 1px solid lightskyblue;
+}
+.btn-login:hover{
+    color: lightsalmon;
+    background: var(--secondary);
+    border: 1px solid var(--primary);
+}
+
+header .topbar{
+    background: var(--ternary);
+    color: var(--pure);
+    font-family: "raleway-semibold";
+    padding: 0.20rem;
+}
+
+header .topbar a img{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+header .topbar .site h1{
+    font-family: "raleway-bold";
+    font-style: oblique;
+    color: #fe4545;
+}
+header .topbar .icons a img{
+    margin-right: 3px;
+} 
+nav .search{
+    margin-top: 0.5rem;
+}
+
+nav .search{
+    padding: 0.75rem;
+    background:#232838;
+    display: flex;
+    justify-content: center;
+}
+
+nav .search input{
+    width: 70%;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+
+nav .search button{
+    padding: 0.3rem;
+    border: none;
+    background: var(--secondary);
+    color: var(--pure);
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3 ease;
+    outline:none
+}
+
+nav .search input{
+    outline: none;
+}
+
+nav .search  button:hover{
+    background: blue;
+}
+
+nav .hub .container{
+    padding: 0.5rem;
+    background: var(--ternary);
+}
+
+nav .hub .container a{
+    color: #f0f0f0;
+    text-decoration: none;
+    font-family: "raleway-semibold";
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all  .3s  ease;
+}
+
+nav .hub .container a.active{
+    background: var(--primary);
+    color: var(--pure);
+}
+
+nav .hub .container a:hover{
+    background: var(--primary);
+    color: var(--pure);
+}
+
+.mySlides {display: none}
+.cont{
+    background: var(--heaven);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color:var(--secondary);
+}
+
+/* Caption text */
+.text {
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+    font-family: "raleway-semibold";
+  color:#232838;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.tex{
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+    font-family: "raleway-medium";
+  color:#232838;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.img{
+    margin-right: 4rem;
+    margin-left: 30%;
+    margin-top: 1rem;
+    justify-content: center;
+    justify-items: center;
+    padding: 1rem;
+    width: 40%;
+    height: 300px;
+    display: flex;
+    flex-direction:row;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.cnt{
+    background: #bbb;
+    position: relative;
+    z-index: 0;
+}
+
+.ig{
+    width: 50%;
+    height: 200px;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.hd{
+    font-family: "raleway-semibold";
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.pr{
+    font-family: "raleway-medium";
+    margin-left: 2rem;
+}
+
+.btn-view{
+    background:var(--secondary);
+    color: var(--primary);
+    padding: 0.75rem 0.75rem;
+border-radius: 4px;border: none;
+line-height: 0.8;
+font-size: 1rem;
+cursor: pointer;
+transition: all 0.3s ease;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+border: 1px solid transparent;
+margin-left: 2rem;
+}
+
+.btn-view:hover{
+    background: var(--heaven);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.section-heading{
+    font-family: "raleway-bold";
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.section-heading::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-image: url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -40px;
+}
+
+.btn{
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;border: none;
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+    .btn-primary{
+        background: var(--primary);
+        color: var(--heaven);
+    }
+    
+    .btn-primary:hover{
+        background: var(--heaven);
+        color: var(--primary);
+        border: 1px solid var(--primary);
+    }
+    
+    .btn-secondary{
+        padding: 0.75rem 0.75rem;
+    border-radius: 4px;border: none;
+    line-height: 0.4;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+        background: var(--secondary);
+        color: var(--heaven);
+    }
+    
+    .btn-secondary:hover{
+        background: var(--heaven);
+        color: var(--secondary);
+        border: 1px solid var(--secondary);
+    }
+
+section.our-services{
+    background: var(--light); 
+    position: relative;
+    z-index: 0;
+    }
+    
+    section.our-services .card-wrapper{
+        margin: -2rem;
+        margin-top: 8rem;
+    }
+    
+    section.our-services .service-card{
+        background: var(--heaven);
+        text-align: center;
+        padding: 2rem;
+        padding-top: 4rem;
+        position: relative;
+        border-radius: 4px;
+        margin-right: 2rem;
+    }
+    
+    section.our-services .service-card .icon{
+        position: absolute;
+        top:-40px;
+        left:50%;
+        transform:translatex(-50%);
+    }
+    
+    section.our-services .service-card h2{
+        font-family: "raleway-bold";
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    section.our-services .service-card p{
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+
+    footer{
+        background: var(--footer);
+        padding: 4rem 0;
+    }
+
+    footer .container{
+        display: flex;
+        color: var(--pure);
+    }
+
+    footer .box{
+        flex:1;
+        margin-right: 2rem;
+        text-align: center;
+    }
+
+    footer .box ul{
+        list-style-type:none;
+    }
+    
+    footer .box ul li a{
+        color: var(--pure);
+        text-decoration: none;
+        transition:all 0.3 ease;
+    }
+    
+    footer .box ul li a:hover{
+        color: var(--primary);
+    }
+    
+    footer .box h3{
+        border-bottom: 1px solid var(--primary);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    footer .box p{
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    footer .box ul li{
+        margin-bottom: 1rem;
+    }
+    
+    footer .box:nth-child(3) > div{
+        display: flex;
+        justify-content:center;
+    }
+    
+    footer .box:nth-child(3){
+        text-align: left;
+    }
+    
+    footer .box:nth-child(3) h1{
+        text-align: center;
+    }
+    
+    footer .box:nth-child(3) > div img{
+        margin-right: 1rem;
+    }
+    
+    footer .box:nth-child(3) > div ul li{
+        margin-bottom: 1.5rem;
+    }
+    
+    footer.copyright{
+        padding:1rem 0;
+        background: var(--secondary);
+        color: var(--pure);
+        text-align: center;
+        font-size: 0.75rem;
+    }
+    
+    footer.copyright a{
+        color: var(--primary);
+        text-decoration: none;
+    }

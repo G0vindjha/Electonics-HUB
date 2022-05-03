@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronics Hub</title>
+  <link rel="stylesheet" href="./css/style1.css">
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <div class="nav-bg">
+      navigation links
+    </div>
+    <div class="site-content-wrapper">
+      <div class="nav-trigger">
+        <a href="./electronics1.html" style="color: black;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-bar-chart">
+          <line x1="12" y1="20" x2="12" y2="10" />
+          <line x1="18" y1="20" x2="18" y2="4" />
+          <line x1="6" y1="20" x2="6" y2="16" />
+        </a>
+        
+        </svg>
+      </div>
+      <div class="site-content">
+        <header>
+          <div>
+            <div class="topbar flex item-center justify-between">
+              <div>
+                <a href="./login page.html"><img src="./icons/user-icon-18dp.svg" alt="" style="padding-left: 50px;"></a>
+              </div>
+              <div class="site">
+                <h1>electronics Hub</h1>
+              </div>
+              <div class="icons flex">
+                <a href="#"><img src="./icons/cart-option-18dp.svg" alt=""></a>
+                <a href="#"><img src="./icons/mic-black-18dp.svg" alt=""></a>
+                <a href="#"><img src="./icons/camera-18dp.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <nav>
+          <div class="search">
+            <input type="search" placeholder="search">
+            <button><img src="./icons/search.svg" alt=""></button>
+          </div>
+        </nav>
+        <nav>
+          <div class="hub">
+            <div class="container flex item-center justify-between">
+              <a href="./electronics.html" class="active">Home</a>
+              <a href="./Headphones.html">Headphones</a>
+              <a href="./earphones.html">Earphones</a>
+              <a href="./Earbuds.html">Earbuds</a>
+              <a href="./Smartphones.html">Smartphones</a>
+              <a href="./Home Applances.html">Home-Applances</a>
+            </div>
+          </div>
+        </nav>
+        <section class="Home-Prodects">
+          <div class="container cont">
+            <div class="slideshow-container item-center cont">
+
+              <div class="mySlides fade">
+                <img class="img" src="./images/headphones.boat1jpg.jpeg" style="width:100% height:20%;">
+                <div class="text ">Boat headpnone</div>
+                <p class="tex">It is now avalable on Electronics Hub in exclusive rate so enjoy your Deal</p>
+              </div>
+
+              <div class="mySlides fade">
+                <img class="img" src="./images/neck-band-noice.jpg" style="width:40%">
+                <div class="text">Noice nackband
+                </div>
+                <p class="tex">It is now avalable on Electronics Hub in exclusive rate so enjoy your Deal</p>
+              </div>
+
+              <div class="mySlides fade">
+                <img class="img" src="./images/headphones-boat.jpg" style="width:40%">
+                <div class="text">Boat Headphones
+                </div>
+                <p class="tex">It is now avalable on Electronics Hub in exclusive rate so enjoy your Deal</p>
+              </div>
+
+              <div class="mySlides fade">
+                <img class="img" src="./images/earphone-boat.jpg" style="width:40%">
+                <div class="text">Boat Earphones
+                </div>
+                <p class="tex">It is now avalable on Electronics Hub in exclusive rate so enjoy your Deal</p>
+              </div>
+
+              <div class="mySlides fade">
+                <img class="img" src="./images/buds-mi.jpeg" style="width:40%">
+                <div class="text"> Mi buds
+                </div>
+                <p class="tex">It is now avalable on Electronics Hub in exclusive rate so enjoy your Deal</p>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
+            <script>
+              var slideIndex = 1;
+              showSlides(slideIndex);
+
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+
+              function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+              }
+            </script>
+          </div>
+          <section class="section-heading">
+            <h1>All brands Earphones & Neckbands & Buds</h1>
+          </section>
+        </section>
+        <section class="3rd-cont">
+          <div class="container cnt">
+            <div class="products flex">
+              <div class="pd-wrapper flex">
+                <article class="All-wrapper">
+                  <div class="All-img">
+                    <img class="ig" src="./images/earphone-lava.jpg" alt="">
+                  </div>
+                  <div class="All-text">
+                    <h1 class="hd">Lava Earphones</h1>
+                    <p class="pr">It is exclusive product of lava and it is now available on Electronics Hub.</p>
+                    <button class="btn-view">View More</button>
+                  </div>
+                </article>
+                <article class="All-wrapper">
+                  <div class="All-img">
+                    <img class="ig" src="./images/earphone-mi.jpg" alt="">
+                  </div>
+                  <div class="All-text">
+                    <h1 class="hd">MI Earphones</h1>
+                    <p class="pr">It is exclusive product of MI and it is now available on Electronics Hub.</p>
+                    <button class="btn-view">View More</button>
+                  </div>
+                </article>
+                <article class="All-wrapper">
+                  <div class="All-img">
+                    <img class="ig" src="./images/earphone-miniso.jpg" alt="">
+                  </div>
+                  <div class="All-text">
+                    <h1 class="hd">Miniso Earphones</h1>
+                    <p class="pr">It is exclusive product of Miniso and it is now available on Electronics Hub.</p>
+                    <button class="btn-view">View More</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="4th-cont">
+          <div class="container cnt">
+            <div class="products flex">
+              <div class="pd-wrapper flex">
+                <article class="All-wrapper">
+                  <div class="All-img">
+                    <img class="ig" src="./images/buds-mi.jpeg" alt="">
+                  </div>
+                  <div class="All-text">
+                    <h1 class="hd">Mi Buds</h1>
+                    <p class="pr">It is exclusive product of MI and it is now available on Electronics Hub.</p>
+                    <button class="btn-view">View More</button>
+                  </div>
+                </article>
+                <article class="All-wrapper">
+                  <div class="All-img">
+                    <img class="ig" src="./images/buds-oneplus.jpeg" alt="">
+                  </div>
+                  <div class="All-text">
+                    <h1 class="hd">OnePlus Buds</h1>
+                    <p class="pr">It is exclusive product of OnePlus and it is now available on Electronics Hub.</p>
+                    <button class="btn-view">View More</button>
+                  </div>
+                </article>
+                <article class="All-wrapper">
+                  <div class="All-img">
+                    <img class="ig" src="./images/buds-boat.jpg" alt="">
+                  </div>
+                  <div class="All-text">
+                    <h1 class="hd">Boat Buds</h1>
+                    <p class="pr">It is exclusive product of Boat and it is now available on Electronics Hub.</p>
+                    <button class="btn-view">View More</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="4th-cont">
+          <div class="container cnt">
+            <div class="products flex">
+              <div class="pd-wrapper flex">
+                <article class="All-wrapper">
+                  <div class="All-img">
+                    <img class="ig" src="./images/neck-band-noice.jpg" alt="">
+                  </div>
+                  <div class="All-text">
+                    <h1 class="hd">Noice Neckbands</h1>
+                    <p class="pr">It is exclusive product of Noice and it is now available on Electronics Hub.</p>
+                    <button class="btn-view">View More</button>
+                  </div>
+                </article>
+                <article class="All-wrapper">
+                  <div class="All-img">
+                    <img class="ig" src="./images/neck-band1.jpg" alt="">
+                  </div>
+                  <div class="All-text">
+                    <h1 class="hd">Boat Neckbands</h1>
+                    <p class="pr">It is exclusive product of Boat and it is now available on Electronics Hub.</p>
+                    <button class="btn-view">View More</button>
+                  </div>
+                </article>
+                <article class="All-wrapper">
+                  <div class="All-img">
+                    <img class="ig" src="./images/neck-band-xiaomi.jpg" alt="">
+                  </div>
+                  <div class="All-text">
+                    <h1 class="hd">Xiaomi Neckbands</h1>
+                    <p class="pr">It is exclusive product of Xiaomi and it is now available on Electronics Hub.</p>
+                    <button class="btn-view" style="margin-bottom: 2rem;">View More</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="our-services">
+          <div class="container">
+            <h1 class="section-heading"> Our Services</h1>
+            <div class="card-wrapper flex">
+              <div class="service-card magic-shadow-sm">
+                <img class="icon" src="./icons/transport.svg" alt="">
+                <h2>Free Home Delivery</h2>
+                <p>we will deliver you Products as soon as posible with in given date</p>
+                <button class="btn-secondary">Read More</button>
+              </div>
+              <div class="service-card magic-shadow-sm">
+                <img class="icon" src="./icons/bag.svg" alt="">
+                <h2 class="text-primary">Return Service</h2>
+                <p>If any problem occurs with our product then we will tack it return but condition is in between 1 Day
+                  only if you want to return any product</p>
+                <button class="btn-secondary">Read More</button>
+              </div>
+              <div class="service-card magic-shadow-sm">
+                <img class="icon" src="./icons/usd.svg" alt="">
+                <h2>Money Back Guranted</h2>
+                <p>If you have any problem with our product then return it and with in 24 hours we will dafinatly refund
+                  you total money.</p>
+                <button class="btn-secondary">Read More</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div class="container flex">
+            <div class="box">
+              <h3>About Us</h3>
+              <p>We are Electronic Hub we have aim to sell our best product in best price for our best coustomers and
+                happy in there order and happiness and if any problem arries with our products then you dont have to
+                worrie we are here to help you in 24x7.</p>
+              <button class="btn-secondary">View More</button>
+            </div>
+            <div class="box">
+              <h3>Quick Pages</h3>
+              <ul>
+                <li>
+                  <a href="./electronics.html">Home</a>
+                </li>
+                <li>
+                  <a href="./Headphones.html">Headphones</a>
+                </li>
+                <li>
+                  <a href="./earphones.html">Earphones</a>
+                </li>
+                <li>
+                  <a href="./Earbuds.html">Earbuds</a>
+                </li>
+                <li>
+                  <a href="./Smartphones.html">Smartphones</a>
+                </li>
+                <li>
+                  <a href="./Home Applances.html">Home-Applances</a>
+                </li>
+              </ul>
+            </div>
+            <div class="box">
+              <h3>Social links</h3>
+              <ul>
+                <li>
+                <li>
+                  <a href="https://www.facebook.com/profile.php?id=100050188306012">
+                    <img src="./icons/facebook.svg" alt="">
+                    <span>Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/_terminator_x_?igshid=tcabgpq5ib3g">
+                    <img src="./icons/instagram.svg" alt="">
+                    <span>Instagram</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./icons/twitter.svg" alt="">
+                    <span>twitter</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./icons/google.svg" alt="">
+                    <snap>Google</snap>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <footer class="copyright">
+          <div>
+            copyright C 2020 .All rights reserved by <a href="a">Govind Jha</a>.
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script src="js/app1.js"></script>
+</body>
+
+</html>
